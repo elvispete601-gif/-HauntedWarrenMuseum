@@ -1,0 +1,14 @@
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector("#nav");
+
+// Open and close the mobile menu
+menuButton.addEventListener("click", () => {
+  navigation.classList.toggle("open");
+});
+
+// Close the menu after selecting a page
+document.querySelectorAll("#nav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navigation.classList.remove("open");
+  });
+});
